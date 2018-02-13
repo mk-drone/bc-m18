@@ -16,14 +16,14 @@ plugins = [
     })
 ]
 
-// if(env === 'production') {
-//     plugins.push(
-//         new webpack.optimize.UglifyJsPlugin(),
-//         new OptimizeJsPlugin({
-//             sourceMap: false
-//         })
-//     )
-// }
+if(env === 'production') {
+    plugins.push(
+        new webpack.optimize.UglifyJsPlugin(),
+        new OptimizeJsPlugin({
+            sourceMap: false
+        })
+    )
+}
 
 module.exports = {
     entry: (env !== 'production' ? [
